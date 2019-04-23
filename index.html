@@ -1,0 +1,94 @@
+# eggNinja.github.io
+project website
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Scene change</title>
+        <style>
+        #leafers {
+            position: absolute;
+            top: 210px;
+            left: 378px;
+        }
+          #fire {
+              position: absolute;
+              top: 210px;
+              left: 290px;
+          }  
+          #water {
+              position: absolute;
+              top:170px;
+              left:70px;
+          }
+        </style>
+    </head>
+    <body>
+
+    <img src="https://www.kasandbox.org/programming-images/landscapes/beach-with-palm-trees.png" id="back">
+
+    <img src="https://www.kasandbox.org/programming-images/avatars/leafers-seedling.png" id="leafers">
+    <img src="https://www.kasandbox.org/programming-images/avatars/piceratops-seedling.png" id="fire">
+    <img src="https://www.kasandbox.org/programming-images/avatars/aqualine-seedling.png" id="water">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    var lefterC = function(){
+       var $img = $("<img>")
+            .attr("scr","https://www.kasandbox.org/programming-images/animals/crocodiles.png")
+            .width(010)
+            .css("position", "absolute")
+            .css("top", event.pageY + "px")
+            .css("left", event.pageX + "px")
+            .appendTo("body");
+    };
+        $("#leafers").on("click", function(event) {
+            // Do some
+            var $img = $("<img>")
+                .attr("src", "https://www.kasandbox.org/programming-images/avatars/leafers-sapling.png")
+                .width(160)
+                .css("position", "absolute")
+                .css("top", 185 + "px")
+                .css("left", 375 + "px")
+                .appendTo("body");
+             
+            
+        });
+        $("#fire").on("click", function(event) {
+            var $pic = $("<img>")
+            .attr("src","https://www.kasandbox.org/programming-images/avatars/piceratops-tree.png" )
+            .width(160)
+            .css("position","absolute")
+            .css("left", 275 + "px")
+            .css("top",190 + "px")
+            .appendTo("body");
+                
+                /*.attr("src","https://www.kasandbox.org/programming-images/avatars/piceratops-tree.png")
+                .width(160)
+                .css("positoin", "absolute")
+                .css("top", 150 +"px")
+                .css("left", 150 + "px")
+                .appendTo("body");*/
+        });
+        $("#water").on("click", function(event) {
+            var $img2 = $("<img>")
+            .attr("src", "https://www.kasandbox.org/programming-images/avatars/aqualine-tree.png")
+            .width(160)
+            .css("position","absolute")
+            .css("left", 50 +"px")
+            .css("top",145+"px")
+            .appendTo("body");
+        });
+        $("#back").on("click", function(event){
+            var leafImg = $("<img>")
+            .attr("src", "https://www.kasandbox.org/programming-images/avatars/leaf-orange.png")
+            .width(50)
+            .css("position", "absolute")
+            .css("left", event.pageX - 25 + "px")
+            .css("top",event.pageY - 30 + "px")
+            .appendTo("body");
+        });
+        
+    </script>
+    </body>
+</html>
